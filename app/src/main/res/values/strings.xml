@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">NFC Rolodex</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main_menu">NFC Rolodex</string>
+    <string name="title_activity_create_business_card">Create Business Card</string>
+    <string name="title_activity_business_cards">Business Cards</string>
+    <string name="title_activity_share_your_card">Share Your Card</string>
+    <string name="title_activity_edit_your_card">Edit Your Card</string>
+    <string name="title_activity_manual_add_card">Add Card</string>
+    <string name="title_activity_business_card_details">Card Details</string>
+
+</resources>

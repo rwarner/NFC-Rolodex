@@ -1,0 +1,94 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.warner.nfcrolodex"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+
+        <!-- Main Menu Activity -->
+        <activity
+            android:name=".MainMenu"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Creation of Business Card Activity -->
+        <activity
+            android:name=".CreateBusinessCard"
+            android:label="@string/title_activity_create_business_card"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <!-- Business Cards activity -->
+        <activity
+            android:name=".BusinessCards"
+            android:label="@string/title_activity_business_cards" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.warner.nfcrolodex.MainMenu" />
+        </activity>
+
+        <!-- Share Your Card Activity -->
+        <activity
+            android:name=".ShareYourCard"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/title_activity_share_your_card"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <data android:mimeType="application/com.warner.nfcrolodex" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.warner.nfcrolodex.MainMenu" />
+        </activity>
+
+        <!-- Edit Your Card Activity -->
+        <activity
+            android:name=".EditYourCard"
+            android:label="@string/title_activity_edit_your_card" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.warner.nfcrolodex.MainMenu" />
+        </activity>
+
+        <!-- Manual Add Card Activity -->
+        <activity
+            android:name=".ManualAddCard"
+            android:label="@string/title_activity_manual_add_card" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.warner.nfcrolodex.BusinessCards" />
+        </activity>
+        <activity
+            android:name=".BusinessCardDetails"
+            android:label="@string/title_activity_business_card_details" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.warner.nfcrolodex.BusinessCards" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    tools:ignore="HardcodedText" >
+    
+    <!-- 
+    		Information:
+    
+    					Name
+    					Email
+    					Phone Number
+    					Website			
+    -->
+
+
+    <TextView
+        android:id="@+id/detailsNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:ems="10"
+        android:hint="Name" />
+    
+    <TextView
+        android:id="@+id/detailsEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailsNameTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:text="Email"
+        android:clickable="true"
+        android:autoLink="email" />
+    
+    <TextView
+        android:id="@+id/detailsPhoneNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailsEmailTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="Phone Number"
+        android:clickable="true"
+        android:autoLink="phone"
+        android:phoneNumber="true" />
+    
+    <TextView
+        android:id="@+id/detailsWebsiteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailsPhoneNumberTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="Website" />
+
+</RelativeLayout>

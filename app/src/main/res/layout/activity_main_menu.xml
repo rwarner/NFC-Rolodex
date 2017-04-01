@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC" >
+
+    
+    <!-- 
+        <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp"
+        android:text="NFC Rolodex"
+        android:textSize="25dp"
+        tools:context=".MainMenu"
+        tools:ignore="HardcodedText" />-->
+
+    <Button
+        android:id="@+id/businessCardsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleText"
+        android:layout_marginTop="50dp"
+        android:text="Business Cards"
+        android:onClick="switchToBusinessCards"
+        tools:ignore="HardcodedText"/>
+    
+    <Button
+        android:id="@+id/shareYourCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/businessCardsButton"
+        android:layout_marginTop="30dp"
+        android:text="Share Your Card"
+        android:onClick="switchToShareYourCard"
+        tools:ignore="HardcodedText" />
+    
+    <Button
+        android:id="@+id/editYourCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/shareYourCardButton"
+        android:layout_marginTop="30dp"
+        android:text="Edit Your Card"
+        android:onClick="switchToEditYourCard"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

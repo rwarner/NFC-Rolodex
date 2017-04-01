@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    tools:ignore="HardcodedText" >
+    
+    <!-- 
+    		Information:
+    
+    					Name
+    					Email
+    					Phone Number
+    					Website			
+    -->
+
+
+    <EditText
+        android:id="@+id/manualNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name" />
+    
+    <EditText
+        android:id="@+id/manualEmailEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manualNameEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+    
+    <EditText
+        android:id="@+id/manualPhoneNumberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manualEmailEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone" />
+    
+    <EditText
+        android:id="@+id/manualWebsiteEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manualPhoneNumberEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Website"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/manualsaveButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/manualWebsiteEditText"
+        android:layout_marginTop="10dp"
+        android:text="Save"
+        android:onClick="saveFields" />
+
+</RelativeLayout>

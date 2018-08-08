@@ -2,8 +2,6 @@ package com.warner.nfcrolodex;
 
 import java.nio.charset.Charset;
 
-import org.apache.http.util.ByteArrayBuffer;
-
 import com.warner.nfcrolodex.database.BusinessCardsDataSource;
 
 import android.nfc.FormatException;

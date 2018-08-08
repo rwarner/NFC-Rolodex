@@ -1,10 +1,9 @@
 package com.warner.nfcrolodex;
 
-import java.nio.charset.Charset;
-
-import com.warner.nfcrolodex.database.BusinessCardsDataSource;
-
-import android.nfc.FormatException;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
@@ -13,16 +12,14 @@ import android.nfc.NfcEvent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.Settings;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.support.v4.app.NavUtils;
+
+import com.warner.nfcrolodex.database.BusinessCardsDataSource;
+
+import java.nio.charset.Charset;
 
 public class ShareYourCard extends Activity implements CreateNdefMessageCallback {
 	
